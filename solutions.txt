@@ -1,0 +1,9 @@
+#1
+--comments: ^ denotes beginning of line then search for ones with Z
+grep -iE '^Z' cities.txt
+
+#2
+--comments: $ denotes end of line so searches for gan at tail
+grep -i 'gan$' cities.txt
+
+
