@@ -6,4 +6,26 @@ grep -iE '^Z' cities.txt
 --comments: $ denotes end of line so searches for gan at tail
 grep -i 'gan$' cities.txt
 
+#3
+--comments: ^ denotes beginning of line, and [ADE] specifies letters to search
+grep -iE '^[ADE]' cities.txt
 
+#4
+--comments: \< to search the beginning of words while . ignores first character
+grep -iE '\<.ar' cities.txt
+
+#5
+--comments: -v to ignore cities that begin with C
+grep -v '^C' cities.txt
+
+#6
+--comments: search cities with at least 14 characters that are either a-z alphabet letters or dashes (-)
+egrep -iE '^[a-z|-]{14}' cities.txt
+
+#7
+--comments: use -o to count matching cities that begin with B
+grep -o '^B' cities.txt | wc -l
+
+#8
+--comments: use -o to count matching d's in cities
+grep -o 'd' cities.txt | wc -l
