@@ -29,3 +29,11 @@ grep -o '^B' cities.txt | wc -l
 #8
 --comments: use -o to count matching d's in cities
 grep -o 'd' cities.txt | wc -l
+
+#9
+--comments: compares last 2 characters for a match
+grep -E "([a-z]\1*([a-z])\2\>" cities.txt
+
+#10
+--comments: finds two matches outer layers of chars and inner char
+grep -i "^\(.\)\(.\).\2\1$" cities.txt
